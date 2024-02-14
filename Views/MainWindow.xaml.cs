@@ -45,7 +45,7 @@ namespace CookBook.Views
         }
 
         // Button click event for editing a recipe
-       /* private void EditRecipeButton_Click(object sender, RoutedEventArgs e)
+        private void EditRecipeButton_Click(object sender, RoutedEventArgs e)
         {
             // Retrieve selected recipe from the ListView
             Recipe selectedRecipe = (Recipe)RecipeListView.SelectedItem;
@@ -74,7 +74,7 @@ namespace CookBook.Views
                 recipeManager.DeleteRecipe(selectedRecipe.Name);
                 RefreshRecipeList();
             }
-        }*/
+        }
 
         // Button click event for exporting a recipe to PDF
         private void ExportToPDFButton_Click(object sender, RoutedEventArgs e)

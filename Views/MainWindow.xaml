@@ -28,7 +28,7 @@
             </StackPanel>
 
             <!-- Recipe List -->
-            <ListView Grid.Column="1" ItemsSource="{Binding Recipes}" Margin="0,0,20,0">
+            <ListView x:Name="RecipeListView" Grid.Column="1" ItemsSource="{Binding Recipes}" Margin="0,0,20,0">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
@@ -38,7 +38,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-
+            
             <!-- Recipe Actions -->
             <StackPanel Grid.Column="2">
                 <Button Content="Add Recipe" Width="100" Margin="0,0,0,10"/>

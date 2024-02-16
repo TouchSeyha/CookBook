@@ -41,7 +41,7 @@
             
             <!-- Recipe Actions -->
             <StackPanel Grid.Column="2">
-                <Button Content="Add Recipe" Width="100" Margin="0,0,0,10"/>
+                <Button Content="Add Recipe" Width="100" Margin="0,0,0,10" Click="AddRecipe_Click"/>
                 <Button Content="Edit Recipe" Width="100" Margin="0,0,0,10"/>
                 <Button Content="Delete Recipe" Width="100" Margin="0,0,0,10"/>
                 <Button Content="Export to PDF" Width="100" Margin="0,0,0,10"/>

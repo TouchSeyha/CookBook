@@ -22,10 +22,22 @@ namespace CookBook.Views
         // ObservableCollection to bind to the ListView
         public ObservableCollection<Recipe> Recipes { get; set; } = new ObservableCollection<Recipe>();
 
+
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = this; // Set DataContext to enable data binding
+            InitializeSampleData();
+            DataContext = this; 
+            RefreshRecipeList();
+        }
+
+        // Helper method to initialize sample data
+        private void InitializeSampleData()
+        {
+            Recipes.Add(new Recipe { Name = "Pad Thai", Type = "Noodle Dish", Cuisine = "Thai" });
+            Recipes.Add(new Recipe { Name = "Sushi", Type = "Sushi", Cuisine = "Japanese" });
+            Recipes.Add(new Recipe { Name = "Pizza Margherita", Type = "Pizza", Cuisine = "Italian" });
+            
         }
 
         // Button click event for adding a recipe
@@ -52,12 +64,7 @@ namespace CookBook.Views
 
             if (selectedRecipe != null)
             {
-                // Open a dialog or navigate to a new window for editing
-                // You can implement this part based on your UI design
-                // Pass the selectedRecipe to the editing form
-                // ...
-
-                // After editing, update the recipe in the RecipeManager
+            
                 recipeManager.EditRecipe(selectedRecipe.Name, selectedRecipe);
                 RefreshRecipeList();
             }
@@ -93,6 +100,10 @@ namespace CookBook.Views
             }
         }
 
+        private void RecipeListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 
 }

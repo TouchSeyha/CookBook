@@ -1,6 +1,7 @@
-﻿<Window x:Class="CookBook.Views.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="CookBook.Views.MainWindow"
         Title="Cookbook" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -24,11 +25,21 @@
             <!-- Recipe Details -->
             <StackPanel Grid.Column="0" Margin="0,0,20,0">
                 <TextBlock Text="Recipe Details" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
-                <!-- Add textboxes, labels, and other controls for recipe details -->
+
+                <Label Content="Name:"/>
+                <TextBox Width="150" Margin="0,0,0,10"/>
+
+                <Label Content="Type:"/>
+                <TextBox Width="150" Margin="0,0,0,10"/>
+
+                <Label Content="Cuisine:"/>
+                <TextBox Width="150" Margin="0,0,0,10"/>
+
+                <!-- Add more textboxes and labels for other recipe details -->
             </StackPanel>
 
             <!-- Recipe List -->
-            <ListView x:Name="RecipeListView" Grid.Column="1" ItemsSource="{Binding Recipes}" Margin="0,0,20,0">
+            <ListView x:Name="RecipeListView" Grid.Column="1" ItemsSource="{Binding Recipes}" Margin="0,0,20,0" av:ItemsSource="{av:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
@@ -38,10 +49,10 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            
+
             <!-- Recipe Actions -->
             <StackPanel Grid.Column="2">
-                <Button Content="Add Recipe" Width="100" Margin="0,0,0,10" Click="AddRecipe_Click"/>
+                <Button Content="Add Recipe" Width="100" Margin="0,0,0,10"/>
                 <Button Content="Edit Recipe" Width="100" Margin="0,0,0,10"/>
                 <Button Content="Delete Recipe" Width="100" Margin="0,0,0,10"/>
                 <Button Content="Export to PDF" Width="100" Margin="0,0,0,10"/>

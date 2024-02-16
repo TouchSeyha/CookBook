@@ -24,8 +24,6 @@ namespace CookBook.Managers
                 existingRecipe.Name = newRecipe.Name;
                 existingRecipe.Type = newRecipe.Type;
                 existingRecipe.Cuisine = newRecipe.Cuisine;
-                existingRecipe.Ingredients = newRecipe.Ingredients;
-                existingRecipe.Instructions = newRecipe.Instructions;
             }
         }
 

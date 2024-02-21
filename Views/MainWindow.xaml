@@ -11,7 +11,7 @@
 
         <!-- Header -->
         <StackPanel Grid.Row="0" Background="#3498db" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="Cookbook" FontSize="30" Foreground="White" FontWeight="Bold" Margin="10"/>
+            <TextBlock Text="RecipeBook" FontSize="30" Foreground="White" FontWeight="Bold" Margin="10"/>
         </StackPanel>
 
         <!-- Content -->
